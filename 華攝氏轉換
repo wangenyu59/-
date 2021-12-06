@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+
+void FtoC(double f)
+{
+	cout << "換算成攝氏溫度為"
+		<< ((f - 32) * 5 / 9) << "度";
+}
+void CtoF(double c)
+{
+	cout << "換算成華氏溫度為"
+		<< (c*9/5+32) << "度";
+}
+
+int main()
+{
+	int i;
+	printf("計算華氏轉攝氏請輸入數字1，計算攝氏轉華氏請輸入數字2\n");
+	cin >> i;
+	if (i == 1)
+	{
+		double x;
+		cout << "請輸入華氏的溫度:";
+		cin >> x;
+		FtoC(x);
+	}
+	else if (i==2)
+	{
+		double y;
+		cout << "請輸入攝氏的溫度:";
+		cin >> y;
+		CtoF(y);
+	}
+	else
+	{
+		cout << "請輸入數字1或數字2";
+		exit;
+	}
+	
+}
